@@ -13,8 +13,9 @@
 
   <body class="body">
     <header class="header">
-      <h1 class="headline"> Eventor
-      <h4 class="headline-sub"> The Event Planning Solution</h4><br>
+      <div class='nav-bar'>
+      <a href='/' class="headline">Eventor</a>
+      <h4 class="headline-sub"> The Group Event Planning Solution</h4><br>
         <div class="login-name">
           <% if current_user %>
             Signed in as <strong><%= current_user.name %></strong>!
@@ -24,7 +25,7 @@
             <%= link_to "Log In", login_path, class:"sign-up", id: "sign_in"%>
           <% end %>
         </div>
-        <div>
+      </div>
       <ul class="header-subnav">
         <% if current_user %>
           <li> <%= link_to 'Add New Event', new_event_path, method: :get, class:"header-button" %></li>

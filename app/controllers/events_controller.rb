@@ -23,12 +23,13 @@ class EventsController < ApplicationController
       @event = Event.new(event_params)
       if @event.save
         session[:ugid] = @event.id
-        redirect_to @event
+        redirect_to '/event_members/create'
         flash[:notice] = "Event added successfully"
       else
         flash[:notice] = @event.errors.full_messages.join(", ")
         render :new
       end
+      binding.pry
     end
 
     def edit

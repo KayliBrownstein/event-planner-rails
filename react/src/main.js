@@ -1,14 +1,15 @@
 // import 'babel-polyfill';
 // import React from 'react';
 // import ReactDOM from 'react-dom';
-// // import Root from './Root';
-// // import NewEventContainer from './containers/NewEventContainer';
+// import NavContainer from './containers/NavContainer';
 //
+// // // import Root from './Root';
+// //
 // $(function() {
-//   if (document.getElementById('app')) {
+//   if (document.getElementById('nav')) {
 //     ReactDOM.render(
-//       <Root />,
-//       document.getElementById('app')
+//       <NavContainer />,
+//       document.getElementById('nav')
 //     );
 //   };
 // });
