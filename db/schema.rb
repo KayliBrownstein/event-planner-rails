@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(version: 20170501002722) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.text     "description", null: false
-    t.string   "cutoff_time", null: false
-    t.string   "date",        null: false
-    t.string   "time",        null: false
-    t.string   "location",    null: false
+    t.string   "name",               null: false
+    t.text     "description",        null: false
+    t.string   "cutoff_time",        null: false
+    t.string   "suggested_date",     null: false
+    t.string   "suggested_time",     null: false
+    t.string   "suggested_location", null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

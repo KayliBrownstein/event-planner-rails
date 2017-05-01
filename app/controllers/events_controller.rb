@@ -41,7 +41,7 @@ class EventsController < ApplicationController
    private
 
    def event_params
-     params.require(:event).permit(:name, :user_id, :description, :cutoff_time, :date, :location, :time)
+     params.require(:event).permit(:name, :user_id, :description, :cutoff_time, :suggested_date, :suggested_location, :suggested_time)
    end
 
    def belongs_to_event?(event_id)

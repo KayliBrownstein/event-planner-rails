@@ -15,9 +15,9 @@ RSpec.describe Event, type: :model do
       name: "Birthday Party",
       description: 'This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.',
       cutoff_time: "Monday",
-      date: 'Tuesday',
-      time: '7:00PM',
-      location: 'Regina\'s'
+      suggested_date: 'Tuesday',
+      suggested_time: '7:00PM',
+      suggested_location: 'Regina\'s'
     )
   end
 
