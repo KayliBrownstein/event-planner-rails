@@ -8,6 +8,56 @@
   margin-top: 30px;
 }
 
+.submit-button {
+  color: red;
+  background-color: red;
+}
+
+.button {
+  text-align: center;
+  background-color: #1D0B38;
+}
+
+.actions {
+  text-align: center;
+}
+
+// label, text-field {
+//   flex-basis: 100px;
+// }
+
+.new-event-form {
+  margin-bottom: 20px;
+  // width: 30%;
+  // padding: 20px;
+  // margin-left: 70px;
+  // margin-right: 70px;
+  // text-align: center;
+  // display: inline-block;
+}
+
+.field {
+  // margin-top:10px;
+  // width:60%;
+  // display:flex;
+  // justify-content:space-between;
+  // flex-wrap:wrap;
+}
+
+label {
+  display: inline-block;
+  // width: 140px;
+  text-align: left;
+  color: black;
+  float: left;
+  padding-top: 5px;
+}
+
+// .signed-in-bar {
+//   background-color: #DAD6CA;
+//   width: 1000%;
+// }
+
 body {
   font-family: 'Anaheim';
 }
@@ -45,6 +95,7 @@ body {
   text-align: center;
   font-size: 25px;
   margin-top: 30px;
+  font-family: 'Anaheim';
 }
 
 .login-name {
@@ -67,11 +118,6 @@ body {
   font-size: 16px;
 }
 
-.new-event-form {
-  color: red;
-  width: 40%;
-  margin-left: 40px;
-}
 
 // .box-content {
 //   background-color: #e6e6e6;

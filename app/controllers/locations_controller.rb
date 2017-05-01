@@ -6,14 +6,15 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new(locations_params)
-    @eventshow = Event.find(session[:ugid])
-    users = @eventshow.users
+    @event = Event.find(session[:ugid])
+    users = @event.users
     if @location.save
-      redirect_to event_path(@eventshow)
+      redirect_to event_path(@event)
     else
       flash[:notice] = @location.errors.full_messages.join(", ")
-      redirect_to event_path(@eventshow)
+      redirect_to event_path(@event)
     end
+    binding.pry
   end
 
   private

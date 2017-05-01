@@ -1,12 +1,11 @@
-<div class="new-event-form">
+<div class="new-event-form center small-12 medium-6 large-4 medium-centered large-centered columns">
 <%= form_for(@event) do |q| %>
   <div class="field">
-    <%= q.label :name, "Name" %><br>
-    <%= q.text_field :name %>
+    <%= q.label :name, "Name" %><%= q.text_field :name %>
   </div>
 
   <div class="field">
-    <%= q.label :description, "Description" %><br>
+    <%= q.label :description, "Description" %>
     <%= q.text_field :description %>
   </div>
 
@@ -15,26 +14,26 @@
   </div>
 
   <div class="field">
-    <%= q.label :cutoff_time, "Cutoff time" %><br>
+    <%= q.label :cutoff_time, "Cutoff time" %>
     <%= q.text_field :cutoff_time %>
   </div>
 
   <div class="field">
-    <%= q.label :suggested_date, "Date" %><br>
+    <%= q.label :suggested_date, "Date" %>
     <%= q.text_field :suggested_date %>
   </div>
 
   <div class="field">
-    <%= q.label :suggested_time, "Time" %><br>
+    <%= q.label :suggested_time, "Time" %>
     <%= q.text_field :suggested_time %>
   </div>
 
   <div class="field">
-    <%= q.label :suggested_location, "Location" %><br>
+    <%= q.label :suggested_location, "Location" %>
     <%= q.text_field :suggested_location %>
   </div>
   <div class="actions">
-    <%= q.submit "Add New Event", class:"submit-button"%>
+    <%= q.submit "Add New Event", class:"button"%>
   </div>
 <% end %>
 </div>

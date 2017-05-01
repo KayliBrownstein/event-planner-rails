@@ -11,6 +11,7 @@ class EventsController < ApplicationController
 
     def show
       @location = Location.new
+      @datetime = Datetime.new
       @event = Event.find(params[:id])
       session[:ugid] = @event.id
       belongs_to_event?(@event.id)

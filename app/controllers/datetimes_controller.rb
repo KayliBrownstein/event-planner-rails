@@ -1,0 +1,37 @@
+class DatetimesController < ApplicationController
+
+  def new
+    @datetime = Datetime.new
+  end
+
+  def create
+    @datetime = Datetime.new(datetimes_params)
+    binding.pry
+    @event = Event.find(session[:ugid])
+    users = @event.users
+    if @datetime.save
+      redirect_to event_path(@event)
+    else
+      flash[:notice] = @datetime.errors.full_messages.join(", ")
+      redirect_to event_path(@event)
+    end
+    binding.pry
+  end
+
+  private
+
+   def datetimes_params
+     params.require(:datetime).permit(:user_id, :event_id, :date, :time)
+   end
+
+  #  def all_locations_submitted?(users)
+  #    users.each do |user|
+  #      if user.preferences.empty?
+  #        @submit = false
+  #        break
+  #      else !user.preferences.empty? && @recommendation.nil?
+  #        @submit = true
+  #      end
+  #    end
+  #  end
+end

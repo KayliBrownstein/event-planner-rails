@@ -9,17 +9,19 @@
       </ul>
 
       <h4>Suggested Dates And Times </h4>
+
+      <%= link_to "Suggest a New Date And Time", new_event_datetime_path, class:"generic-buttons" %>
+
       <ul>
          <% @event.datetimes.each do |datetime| %>
          <li><%= datetime.date %></li>
          <li><%= datetime.time %></li>
-
          <% end %>
       </ul>
 
       <h4>Suggested Locations</h4>
 
-      <%= link_to "Suggest a New Location", new_location_path, class:"generic-buttons" %>
+      <%= link_to "Suggest a New Location", new_event_location_path, class:"generic-buttons" %>
 
       <ul>
         <% @event.locations.each do |location| %>

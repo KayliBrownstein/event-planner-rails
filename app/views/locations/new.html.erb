@@ -20,6 +20,10 @@
   </div>
 
   <div class="field">
+    <%= q.hidden_field :event_id, :value => @event_id %>
+  </div>
+
+  <div class="field">
     <%= q.label :city, "City" %><br>
     <%= q.text_field :city %>
   </div>
