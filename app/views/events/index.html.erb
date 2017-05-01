@@ -2,7 +2,9 @@
   <h1 class="show-header"> Events You Belong To </h1>
 
   <div class="groups-list">
-  <% unless @events.nil? %>
+    <% if @events.nil? %>
+      You do not currently belong to any events.
+    <% else %>
     <% @events.each do |event| %>
       <ul class="list-item"> <%= link_to event.name, event %></ul><br>
     <% end %>
