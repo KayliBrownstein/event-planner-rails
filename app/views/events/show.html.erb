@@ -8,6 +8,25 @@
        <% end %>
       </ul>
 
+      <h4>Suggested Dates And Times </h4>
+      <ul>
+         <% @event.datetimes.each do |datetime| %>
+         <li><%= datetime.date %></li>
+         <li><%= datetime.time %></li>
+
+         <% end %>
+      </ul>
+
+      <h4>Suggested Locations</h4>
+
+      <%= link_to "Suggest a New Location", new_location_path, class:"generic-buttons" %>
+
+      <ul>
+        <% @event.locations.each do |location| %>
+        <li><%= location.name %></li>
+        <% end %>
+      </ul>
+
      <%= link_to "Invite New User to Event", new_invite_path, class:"generic-buttons" %>
      <%= link_to "Leave This Event", '/event_members/destroy', method: :delete, class:"generic-buttons" %>
   </div>

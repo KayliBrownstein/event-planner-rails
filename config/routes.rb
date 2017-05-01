@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   root 'home#show'
 
+  match '/locations/create', :to => "locations#create", via: [:get, :post]
+  resources :locations
+
   match '/events/search', :to => "events#search", via: [:get, :post]
   resources :events
 
