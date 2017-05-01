@@ -1,0 +1,11 @@
+<div class="index-page">
+  <h1 class="show-header"> Events You Belong To </h1>
+
+  <div class="groups-list">
+  <% unless @events.nil? %>
+    <% @events.each do |event| %>
+      <ul class="list-item"> <%= link_to event.name, event %></ul><br>
+    <% end %>
+  <% end %>
+  </div>
+</div>
