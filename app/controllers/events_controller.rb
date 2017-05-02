@@ -10,6 +10,8 @@ class EventsController < ApplicationController
     end
 
     def show
+      @location = Location.new
+      @datetime = Datetime.new
       @event = Event.find(params[:id])
       session[:ugid] = @event.id
       belongs_to_event?(@event.id)
@@ -29,7 +31,6 @@ class EventsController < ApplicationController
         flash[:notice] = @event.errors.full_messages.join(", ")
         render :new
       end
-      binding.pry
     end
 
     def edit

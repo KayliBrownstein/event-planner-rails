@@ -2,7 +2,7 @@
   <h1 class="show-header"> Events You Belong To </h1>
 
   <div class="groups-list">
-    <% if @events.nil? %>
+    <% if @events.empty? %>
       You do not currently belong to any events.
     <% else %>
     <% @events.each do |event| %>
