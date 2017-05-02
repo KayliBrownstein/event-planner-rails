@@ -1,5 +1,4 @@
 class DatetimesController < ApplicationController
-
   def new
     @event = Event.find(params[:event_id])
     @datetime = Datetime.new
@@ -8,7 +7,6 @@ class DatetimesController < ApplicationController
   def create
     @datetime = Datetime.new(datetimes_params)
     @event = Event.find(session[:ugid])
-    users = @event.users
     if @datetime.save
       redirect_to event_path(@event)
     else
@@ -19,18 +17,7 @@ class DatetimesController < ApplicationController
 
   private
 
-   def datetimes_params
+  def datetimes_params
      params.require(:datetime).permit(:user_id, :event_id, :date, :time)
-   end
-
-  #  def all_locations_submitted?(users)
-  #    users.each do |user|
-  #      if user.preferences.empty?
-  #        @submit = false
-  #        break
-  #      else !user.preferences.empty? && @recommendation.nil?
-  #        @submit = true
-  #      end
-  #    end
-  #  end
+  end
 end

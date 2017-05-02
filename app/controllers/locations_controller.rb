@@ -1,5 +1,4 @@
 class LocationsController < ApplicationController
-
   def new
     @event = Event.find(params[:event_id])
     @location = Location.new
@@ -10,7 +9,6 @@ class LocationsController < ApplicationController
     # @location.event_id = params[:event_id]
     @event = Event.find(params[:event_id])
     users = @event.users
-    binding.pry
     if @location.save
       redirect_to event_path(@event)
     else
@@ -21,7 +19,8 @@ class LocationsController < ApplicationController
 
   private
 
-   def locations_params
-     params.require(:location).permit(:user_id, :event_id, :name, :street_address, :city, :state, :description)
-   end
+  def locations_params
+     params.require(:location).permit(:user_id, :event_id, :name,
+     :street_address, :city, :state, :description)
+  end
 end
