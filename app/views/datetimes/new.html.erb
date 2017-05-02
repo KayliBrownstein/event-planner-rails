@@ -1,5 +1,8 @@
 <div class="new-datetime-form">
-  <%= form_for [@event, @datetime] do |q| %>
+  <%= form_for([@event, @datetime]) do |q| %>
+    <%= q.hidden_field :event_id, :value => @event.id %>
+    <%= q.hidden_field :user_id, :value => current_user.id %>
+
     <div class="field">
       <%= q.label :date, "Date" %><br>
       <%= q.text_field :date %>

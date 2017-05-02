@@ -1,12 +1,12 @@
 class DatetimesController < ApplicationController
 
   def new
+    @event = Event.find(params[:event_id])
     @datetime = Datetime.new
   end
 
   def create
     @datetime = Datetime.new(datetimes_params)
-    binding.pry
     @event = Event.find(session[:ugid])
     users = @event.users
     if @datetime.save
@@ -15,7 +15,6 @@ class DatetimesController < ApplicationController
       flash[:notice] = @datetime.errors.full_messages.join(", ")
       redirect_to event_path(@event)
     end
-    binding.pry
   end
 
   private

@@ -86,15 +86,17 @@ body {
 }
 
 .headline-sub {
-  text-align: left;
+  // text-align: left;
   float: right;
-  margin-top: 15px;
+  margin: 20px;
+  font-family: cursive;
 }
 
 .show-header {
   text-align: center;
   font-size: 25px;
   margin-top: 30px;
+  margin-bottom: 30px;
   font-family: 'Anaheim';
 }
 
