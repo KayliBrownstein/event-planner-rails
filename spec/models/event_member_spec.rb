@@ -14,7 +14,9 @@ RSpec.describe EventMember, type: :model do
       id: 1,
       user_id: 1,
       name: "Birthday Party",
-      description: 'This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.',
+      description: 'This is a description. This is a description. This is a
+      description. This is a description. This is a description. This is a
+      description.',
       cutoff_time: "Monday",
       suggested_date: 'Tuesday',
       suggested_time: '7:00PM',
